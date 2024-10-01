@@ -1,0 +1,79 @@
+/* src/styles/TopicCard.css */
+
+/* Estilo general para las tarjetas de tema */
+.topic-card {
+  background: rgba(255, 255, 255, 0.95); /* Fondo ligeramente más opaco para dar un efecto suave */
+  border-radius: 15px; /* Bordes redondeados para un diseño más moderno */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Efectos de transición para hover */
+  overflow: hidden; /* Evitar que el contenido se desborde */
+  position: relative; /* Posición relativa para controlar elementos internos */
+  text-align: center; /* Centrar el texto dentro de la tarjeta */
+  border: 2px solid #5b86e5; /* Borde de color azul para mayor definición */
+  max-width: 320px; /* Ancho máximo de la tarjeta */
+  margin: 100px auto; /* Margen automático para centrar la tarjeta en la página */
+  cursor: pointer; /* Cambiar el cursor al pasar el mouse para indicar interactividad */
+}
+
+/* Efecto hover para la tarjeta */
+.topic-card:hover {
+  transform: scale(1.05); /* Escalar ligeramente la tarjeta al pasar el mouse */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3); /* Aumentar la sombra al pasar el mouse */
+}
+
+/* Estilo de la imagen dentro de la tarjeta */
+.topic-image {
+  width: 100%; /* La imagen ocupa todo el ancho de la tarjeta */
+  height: 180px; /* Altura fija para mantener un diseño consistente */
+  object-fit: cover; /* Ajustar la imagen sin distorsionarla */
+  border-bottom: 2px solid #5b86e5; /* Borde inferior de la imagen para separación */
+  transition: transform 0.3s ease-in-out; /* Efecto de transición para el hover */
+}
+
+/* Efecto hover para la imagen */
+.topic-card:hover .topic-image {
+  transform: scale(1.1); /* Escalar la imagen al pasar el mouse */
+}
+
+/* Contenido de la tarjeta */
+.topic-card-content {
+  padding: 20px; /* Espaciado interno del contenido */
+}
+
+/* Estilo del título de la tarjeta */
+.topic-card h3 {
+  margin: 10px 0; /* Margen alrededor del título */
+  font-size: 22px; /* Tamaño de fuente ajustado para evitar cortes de palabras */
+  color: #1e3c72; /* Azul oscuro para buen contraste */
+  text-transform: uppercase; /* Convertir el texto a mayúsculas */
+  letter-spacing: 1px; /* Espaciado entre letras */
+  white-space: normal; /* Permitir que las palabras se dividan en líneas múltiples */
+  word-wrap: break-word; /* Permitir la división de palabras largas */
+}
+
+/* Estilo del párrafo dentro de la tarjeta */
+.topic-card p {
+  font-size: 16px; /* Tamaño de fuente para el texto */
+  color: #000000 !important; /* Color de texto negro, sobrescribiendo otros estilos */
+  margin-top: 10px; /* Espacio por encima del párrafo */
+  line-height: 1.5; /* Espaciado entre líneas para mejor legibilidad */
+}
+
+/* Estilo del botón de "Aprender más" */
+.learn-more {
+  display: inline-block; /* Mantener el botón como un bloque en línea */
+  margin-top: 15px; /* Espacio por encima del botón */
+  padding: 10px 20px; /* Espaciado interno del botón */
+  color: #fff; /* Color del texto del botón */
+  background-color: #1e3c72; /* Fondo azul oscuro para el botón */
+  text-decoration: none; /* Eliminar subrayado del texto del enlace */
+  border-radius: 25px; /* Bordes redondeados para un botón moderno */
+  font-weight: bold; /* Texto en negrita */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Transiciones para hover */
+}
+
+/* Efecto hover para el botón */
+.learn-more:hover {
+  background-color: #1b3a70; /* Cambiar el color de fondo al pasar el mouse */
+  transform: scale(1.05); /* Escalar ligeramente el botón al pasar el mouse */
+}

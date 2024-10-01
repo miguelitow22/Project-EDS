@@ -1,0 +1,63 @@
+/* src/styles/Home.css */
+
+/* Estilo general para el cuerpo del documento */
+body {
+  font-family: Arial, sans-serif; /* Fuente principal */
+  background-color: #c6d7d8; /* Color de fondo */
+  margin: 0; /* Eliminar márgenes por defecto */
+  padding: 0; /* Eliminar padding por defecto */
+}
+
+/* Estilos para la barra de navegación */
+nav ul {
+  list-style: none; /* Eliminar el estilo de lista por defecto */
+  padding: 0; /* Eliminar padding */
+  margin: 0; /* Eliminar márgenes */
+  background-color: #151b1b; /* Fondo oscuro para el menú */
+}
+
+nav ul li {
+  display: inline; /* Mostrar los elementos del menú en línea */
+  margin-right: 10px; /* Espacio entre los elementos del menú */
+}
+
+/* Enlaces de la barra de navegación */
+nav ul li a {
+  color: rgb(183, 212, 218); /* Color de los enlaces */
+  text-decoration: none; /* Eliminar subrayado */
+  padding: 10px; /* Añadir padding para mejorar la área de clic */
+  display: inline-block; /* Mantener la estructura en bloque dentro de los enlaces */
+}
+
+/* Estilo de la sección principal en la página de inicio */
+.home {
+  padding: 20px; /* Espaciado interno */
+  text-align: center; /* Centrar el contenido de la sección */
+}
+
+/* Contenedor para organizar las tarjetas de los temas */
+.topics-grid {
+  display: flex; /* Usar Flexbox para organizar las tarjetas */
+  flex-wrap: wrap; /* Permitir que las tarjetas se ajusten en varias filas */
+  justify-content: center; /* Centrar las tarjetas horizontalmente */
+  gap: 20px; /* Espacio entre cada tarjeta */
+}
+
+/* Estilos individuales para cada tarjeta de tema */
+.topic-card {
+  border: 1px solid #3c6e72; /* Borde para resaltar las tarjetas */
+  padding: 20px; /* Espaciado interno */
+  background-color: rgb(231, 236, 238); /* Color de fondo de las tarjetas */
+  width: 200px; /* Ancho fijo para las tarjetas */
+}
+
+/* Imagen dentro de cada tarjeta de tema */
+.topic-card img {
+  width: 100%; /* Asegurar que la imagen ocupe todo el ancho disponible */
+  height: auto; /* Ajustar altura automáticamente */
+}
+
+/* Contenedor para los videos */
+.video-container {
+  margin: 20px 0; /* Espaciado vertical alrededor del contenedor de video */
+}

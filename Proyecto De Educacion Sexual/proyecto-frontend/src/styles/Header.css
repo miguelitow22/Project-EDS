@@ -1,0 +1,176 @@
+/* src/styles/Header.css */
+
+/* Contenedor principal del Header */
+.header {
+    background: linear-gradient(135deg, #3498db, #6dd5fa); /* Degradado suave en tonos azules */
+    color: white; /* Color del texto */
+    padding: 15px 30px; /* Espaciado interno del header */
+    display: flex; /* Flexbox para disposición de elementos */
+    justify-content: space-between; /* Espacio entre los elementos */
+    align-items: center; /* Centrar elementos verticalmente */
+    position: relative; /* Posicionamiento relativo para elementos internos */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Sombra más prominente */
+    transition: background 0.3s ease, box-shadow 0.3s ease; /* Transición suave para el fondo y la sombra */
+}
+
+/* Efecto al pasar el cursor sobre el header */
+.header:hover {
+    background: linear-gradient(135deg, #2980b9, #1e90ff); /* Cambia el color del fondo */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Aumenta la sombra */
+}
+
+/* Logo del header */
+.logo h1 {
+    margin: 0; /* Eliminar margen por defecto */
+    font-size: 28px; /* Aumentar tamaño del logo */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente del logo */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Sombra de texto para el logo */
+    animation: logoPulse 2s infinite; /* Añadir animación de pulso */
+}
+
+/* Animación de pulso del logo */
+@keyframes logoPulse {
+    0%, 100% {
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Sombra original */
+    }
+    50% {
+        text-shadow: 1px 1px 15px rgba(255, 255, 255, 0.8); /* Efecto de pulso */
+    }
+}
+
+/* Navegación */
+.nav ul {
+    list-style: none; /* Eliminar estilo de lista */
+    margin: 0; /* Eliminar margen */
+    padding: 0; /* Eliminar padding */
+    display: flex; /* Flexbox para disposición de enlaces */
+    background-color: #1eb8ff; /* Color de fondo de la navegación */
+}
+
+/* Elementos de la lista de navegación */
+.nav ul li {
+    margin: 0 20px; /* Aumentar margen entre enlaces */
+}
+
+/* Estilo de los enlaces de navegación */
+.nav ul li a {
+    color: white; /* Color del texto de los enlaces */
+    text-decoration: none; /* Sin subrayado */
+    font-size: 18px; /* Tamaño de fuente de los enlaces */
+    position: relative; /* Posicionamiento relativo para efectos */
+    transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease; /* Transiciones suaves */
+}
+
+/* Efecto de subrayado en enlaces */
+.nav ul li a::after {
+    content: ''; /* Necesario para el pseudo-elemento */
+    display: block; /* Mostrar como bloque */
+    width: 0; /* Ancho inicial */
+    height: 2px; /* Altura del subrayado */
+    background: white; /* Color del subrayado */
+    transition: width 0.3s ease, transform 0.3s ease; /* Transiciones suaves */
+    position: absolute; /* Posicionamiento absoluto */
+    bottom: -5px; /* Colocar el subrayado debajo del texto */
+    left: 0; /* Alinear a la izquierda */
+}
+
+/* Efecto al pasar el cursor sobre los enlaces */
+.nav ul li a:hover::after {
+    width: 100%; /* Ancho completo al pasar el cursor */
+    transform: scaleX(1.1); /* Escalar el subrayado */
+}
+
+/* Efecto de hover para los enlaces */
+.nav ul li a:hover {
+    color: #ecf0f1; /* Color del texto al pasar el cursor */
+    transform: scale(1.1); /* Escalar el texto al pasar el cursor */
+    text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.5); /* Sombra al texto */
+}
+
+/* Icono de menú móvil */
+.mobile-menu-icon {
+    display: none; /* Ocultar icono en pantallas grandes */
+    cursor: pointer; /* Cambiar el cursor al pasar sobre el icono */
+    transition: transform 0.3s ease; /* Transición suave para efectos */
+}
+
+/* Efecto al pasar el cursor sobre el icono de menú móvil */
+.mobile-menu-icon:hover {
+    transform: scale(1.2) rotate(10deg); /* Escalar y rotar el icono */
+}
+
+/* Estilos del icono de hamburguesa */
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+    width: 30px; /* Tamaño del icono de menú */
+    height: 3px; /* Grosor de las líneas */
+    background-color: white; /* Color de las líneas */
+    display: block; /* Mostrar como bloque */
+    transition: all 0.3s ease; /* Transiciones suaves */
+    border-radius: 2px; /* Bordes redondeados */
+    position: relative; /* Posicionamiento relativo */
+}
+
+/* Posicionamiento de las líneas del icono de hamburguesa */
+.hamburger::before,
+.hamburger::after {
+    content: ''; /* Necesario para el pseudo-elemento */
+    position: absolute; /* Posicionamiento absoluto */
+    left: 0; /* Alinear a la izquierda */
+}
+
+.hamburger::before {
+    top: -8px; /* Espaciado superior */
+}
+
+.hamburger::after {
+    top: 8px; /* Espaciado inferior */
+}
+
+/* Estilo de hamburguesa abierta */
+.hamburger.open {
+    background-color: transparent; /* Ocultar la línea central */
+}
+
+.hamburger.open::before {
+    transform: rotate(45deg) translate(5px, 5px); /* Rotar y desplazar la línea superior */
+}
+
+.hamburger.open::after {
+    transform: rotate(-45deg) translate(5px, -5px); /* Rotar y desplazar la línea inferior */
+}
+
+/* Navegación para móviles */
+@media (max-width: 768px) {
+    .nav {
+        position: absolute; /* Posicionamiento absoluto */
+        top: 60px; /* Ubicación debajo del header */
+        left: 0; /* Alinear a la izquierda */
+        width: 100%; /* Ancho completo */
+        background: linear-gradient(135deg, #3498db, #6dd5fa); /* Degradado de fondo */
+        max-height: 0; /* Altura máxima inicial */
+        overflow: hidden; /* Ocultar contenido */
+        transition: max-height 0.3s ease, opacity 0.3s ease; /* Transiciones suaves */
+        opacity: 0; /* Iniciar como invisible */
+    }
+
+    /* Estilo activo para la navegación móvil */
+    .nav.active {
+        max-height: 300px; /* Ajustar según la cantidad de enlaces */
+        opacity: 1; /* Hacer visible el menú */
+    }
+
+    .nav ul {
+        flex-direction: column; /* Disposición vertical de los enlaces */
+        align-items: center; /* Centrar elementos horizontalmente */
+    }
+
+    .nav ul li {
+        margin: 15px 0; /* Margen vertical entre enlaces */
+    }
+
+    .mobile-menu-icon {
+        display: block; /* Mostrar icono en pantallas pequeñas */
+    }
+}

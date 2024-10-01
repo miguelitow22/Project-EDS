@@ -1,0 +1,113 @@
+/* src/styles/Login.css */
+
+/* Contenedor principal del formulario de inicio de sesión */
+.login-container {
+  display: flex; /* Usar Flexbox para centrar el contenido */
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center; /* Centrar verticalmente */
+  min-height: 100vh; /* Altura mínima para cubrir toda la ventana */
+  
+  /* Fondo con degradado y animación suave */
+  background: linear-gradient(to right, #f7f9fc, #e0f7fa);
+  animation: slideUp 1.5s ease-in-out, gradientShift 20s ease-in-out infinite; /* Efectos de entrada y cambio de fondo */
+}
+
+/* Estilo del formulario de inicio de sesión */
+.login-form {
+  width: 100%; /* Ancho completo */
+  max-width: 400px; /* Ancho máximo del formulario */
+  background: #ffffff; /* Fondo blanco */
+  padding: 30px; /* Espaciado interno */
+  border-radius: 12px; /* Bordes redondeados */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra para darle profundidad */
+}
+
+/* Estilo del título del formulario */
+.login-form h2 {
+  margin-bottom: 20px; /* Margen inferior */
+  font-size: 28px; /* Tamaño de fuente */
+  color: #00796b; /* Color del texto */
+  text-align: center; /* Centrar el texto */
+  transition: color 0.3s ease, transform 0.3s ease; /* Transiciones suaves */
+}
+
+/* Efecto hover en el título */
+.login-form h2:hover {
+  color: #004d40; /* Cambiar color al pasar el mouse */
+  transform: scale(1.1); /* Escalar al pasar el mouse */
+}
+
+/* Estilo de los campos de entrada */
+.login-form input {
+  width: 100%; /* Ancho completo */
+  padding: 14px; /* Espaciado interno */
+  margin: 10px 0; /* Margen vertical */
+  border: 1px solid #ddd; /* Borde gris claro */
+  border-radius: 8px; /* Bordes redondeados */
+  font-size: 16px; /* Tamaño de fuente */
+  transition: all 0.3s ease; /* Transiciones suaves */
+}
+
+/* Efecto hover en los campos de entrada */
+.login-form input:hover {
+  border-color: #00796b; /* Cambiar color del borde */
+  transform: scale(1.02); /* Escalar ligeramente */
+  box-shadow: 0 0 10px rgba(0, 121, 107, 0.2); /* Sombra al pasar el mouse */
+}
+
+/* Efecto focus en los campos de entrada */
+.login-form input:focus {
+  border-color: #00796b; /* Cambiar color del borde */
+  box-shadow: 0 0 15px rgba(0, 121, 107, 0.5); /* Sombra más pronunciada */
+  transform: scale(1.03); /* Escalar ligeramente */
+}
+
+/* Estilo del botón de envío */
+.login-form button {
+  width: 100%; /* Ancho completo */
+  padding: 14px; /* Espaciado interno */
+  background-color: #00796b; /* Color de fondo */
+  border: none; /* Sin borde */
+  border-radius: 8px; /* Bordes redondeados */
+  color: white; /* Color del texto */
+  font-size: 18px; /* Tamaño de fuente */
+  cursor: pointer; /* Cambiar el cursor al pasar por encima */
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves */
+}
+
+/* Efecto hover en el botón */
+.login-form button:hover {
+  background-color: #004d40; /* Cambiar color de fondo al pasar el mouse */
+  box-shadow: 0 0 15px rgba(0, 77, 64, 0.5); /* Sombra al pasar el mouse */
+  transform: scale(1.05); /* Escalar ligeramente */
+}
+
+/* Efecto al hacer clic en el botón */
+.login-form button:active {
+  transform: scale(0.95); /* Reducir tamaño al hacer clic */
+}
+
+/* Animación de entrada del formulario */
+@keyframes slideUp {
+  from {
+    transform: translateY(100px); /* Iniciar desde abajo */
+    opacity: 0; /* Invisible al inicio */
+  }
+  to {
+    transform: translateY(0); /* Posición final */
+    opacity: 1; /* Totalmente visible */
+  }
+}
+
+/* Animación de cambio de fondo */
+@keyframes gradientShift {
+  0% {
+    background: linear-gradient(to right, #f7f9fc, #e0f7fa); /* Estado inicial */
+  }
+  50% {
+    background: linear-gradient(to right, #e0f7fa, #b2ebf2); /* Estado intermedio */
+  }
+  100% {
+    background: linear-gradient(to right, #f7f9fc, #e0f7fa); /* Regresar al estado inicial */
+  }
+}

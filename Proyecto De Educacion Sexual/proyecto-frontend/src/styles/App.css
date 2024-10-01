@@ -1,0 +1,55 @@
+/* src/App.css */
+
+/* Estilos generales de la aplicación */
+.App {
+  text-align: center; /* Centra el texto en el contenedor */
+  background-color: hwb(0 99% 1%); /* Fondo gris claro para toda la página */
+  font-family: 'Roboto', sans-serif; /* Fuente para todo el texto */
+}
+
+/* Logo de la aplicación */
+.App-logo {
+  height: 40vmin; /* Altura del logo responsiva */
+  pointer-events: none; /* Desactiva eventos de puntero sobre el logo */
+}
+
+/* Animación del logo */
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear; /* Aplicar animación al logo */
+  }
+}
+
+/* Encabezado de la aplicación */
+.App-header {
+  background-color: #3498db; /* Color de fondo del encabezado */
+  min-height: 100vh; /* Altura mínima del encabezado para cubrir toda la vista */
+  display: flex; /* Usar flexbox para alinear elementos */
+  flex-direction: column; /* Dirección de los elementos: vertical */
+  align-items: center; /* Centrar elementos horizontalmente */
+  justify-content: center; /* Centrar elementos verticalmente */
+  font-size: calc(10px + 2vmin); /* Tamaño de fuente responsivo */
+  color: rgb(244, 248, 250); /* Color del texto */
+  border-bottom: 2px solid #2980b9; /* Línea de borde inferior para definir el encabezado */
+}
+
+/* Estilos para enlaces */
+.App-link {
+  color: #61dafb; /* Color del enlace */
+  font-weight: bold; /* Negrita para enlaces */
+}
+
+/* Efecto hover para enlaces */
+.App-link:hover {
+  text-decoration: underline; /* Subrayado al pasar el mouse sobre el enlace */
+}
+
+/* Animación de rotación del logo */
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg); /* Estado inicial de la rotación */
+  }
+  to {
+    transform: rotate(360deg); /* Estado final de la rotación */
+  }
+}

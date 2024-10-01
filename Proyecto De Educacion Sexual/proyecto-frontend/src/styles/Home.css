@@ -1,0 +1,78 @@
+/* src/styles/Home.css */
+
+/* Fondo con gradiente en tonos azules */
+body {
+    background: linear-gradient(135deg, #5b86e5 0%, #36d1dc 100%); /* Gradiente de fondo */
+    margin: 0; /* Eliminar márgenes por defecto */
+    font-family: 'Arial', sans-serif; /* Fuente del texto */
+}
+
+.home {
+    padding: 40px 20px; /* Espaciado interno del contenedor principal */
+    text-align: center; /* Alinear el texto al centro */
+    color: #fff; /* Color del texto */
+}
+
+/* Estilo del encabezado principal */
+.home-header h1 {
+    font-size: 48px; /* Tamaño de fuente del encabezado */
+    margin-bottom: 20px; /* Espacio inferior */
+    color: #fff; /* Color del texto */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Sombra de texto */
+}
+
+/* Estilo del párrafo en el encabezado */
+.home-header p {
+    font-size: 22px; /* Tamaño de fuente */
+    max-width: 800px; /* Ancho máximo */
+    margin: 0 auto; /* Centrar horizontalmente */
+    color: #cfe2f3; /* Color del texto */
+}
+
+/* Estilo del encabezado de introducción */
+.home-intro h2 {
+    font-size: 36px; /* Tamaño de fuente del subtítulo */
+    margin-bottom: 10px; /* Espacio inferior */
+    color: #fff; /* Color del texto */
+    text-transform: uppercase; /* Transformar texto a mayúsculas */
+    letter-spacing: 1.5px; /* Espaciado entre letras */
+}
+
+/* Estilo del párrafo en la introducción */
+.home-intro p {
+    font-size: 20px; /* Tamaño de fuente */
+    margin-bottom: 30px; /* Espacio inferior */
+    color: #d4e0ef; /* Color del texto */
+}
+
+/* Diseño de la cuadrícula de temas */
+.topics-grid {
+    display: flex; /* Usar flexbox para disposición */
+    flex-wrap: wrap; /* Permitir que los elementos se ajusten en varias líneas */
+    justify-content: center; /* Centrar los elementos horizontalmente */
+    gap: 30px; /* Espacio entre elementos */
+}
+
+/* Efectos de interacción */
+.home-intro h2,
+.home-header h1,
+.home-header p {
+    transition: transform 0.3s ease-in-out; /* Transición suave para el efecto de escalado */
+}
+
+/* Efecto de escalado al pasar el cursor */
+.home-intro h2:hover,
+.home-header h1:hover,
+.home-header p:hover {
+    transform: scale(1.05); /* Escalar el texto al pasar el cursor */
+}
+
+/* Transición de opacidad para la cuadrícula de temas */
+.topics-grid {
+    transition: opacity 0.5s ease-in-out; /* Transición suave para la opacidad */
+}
+
+/* Efecto de opacidad al pasar el cursor sobre la cuadrícula */
+.topics-grid:hover {
+    opacity: 0.9; /* Reducir opacidad al pasar el cursor */
+}
